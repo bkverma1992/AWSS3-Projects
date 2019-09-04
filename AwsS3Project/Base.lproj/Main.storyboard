@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AwsS3Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GnA-61-OHH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="Jt5-Lx-k4L"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKT-Od-Cwg">
+                                <rect key="frame" x="52" y="329" width="271" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="pHM-rS-XN3"/>
+                                    <constraint firstAttribute="height" constant="30" id="qeM-x8-OQX"/>
+                                </constraints>
+                                <state key="normal" title="Upload Bulk"/>
+                                <connections>
+                                    <action selector="onBulkBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pl0-dI-IXJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CE-W1-qmd">
+                                <rect key="frame" x="52" y="377" width="271" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="04J-7m-Xbf"/>
+                                    <constraint firstAttribute="width" constant="271" id="KPY-mo-R6M"/>
+                                </constraints>
+                                <state key="normal" title="Show Content"/>
+                                <connections>
+                                    <action selector="showContent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dgj-ev-6yj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NS-Iz-vdE">
+                                <rect key="frame" x="52" y="281" width="271" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MMg-F7-u8s"/>
+                                    <constraint firstAttribute="width" constant="271" id="cSF-6X-6Na"/>
+                                </constraints>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="onUploadBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyw-ct-20U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GnA-61-OHH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EEs-Qd-Wb9"/>
+                            <constraint firstItem="GnA-61-OHH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Eq3-vu-RXI"/>
+                            <constraint firstItem="GnA-61-OHH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F5e-8I-xUM"/>
+                            <constraint firstItem="oKT-Od-Cwg" firstAttribute="top" secondItem="3NS-Iz-vdE" secondAttribute="bottom" constant="18" id="KAf-hQ-tGJ"/>
+                            <constraint firstItem="1CE-W1-qmd" firstAttribute="top" secondItem="oKT-Od-Cwg" secondAttribute="bottom" constant="18" id="LCf-Zj-9G0"/>
+                            <constraint firstItem="3NS-Iz-vdE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RN1-dz-F5l"/>
+                            <constraint firstItem="3NS-Iz-vdE" firstAttribute="top" secondItem="GnA-61-OHH" secondAttribute="bottom" constant="28" id="XWh-BU-Bm2"/>
+                            <constraint firstItem="1CE-W1-qmd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dq5-DX-nem"/>
+                            <constraint firstItem="oKT-Od-Cwg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDd-5Y-GIL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="GnA-61-OHH" id="qpv-xj-q61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
